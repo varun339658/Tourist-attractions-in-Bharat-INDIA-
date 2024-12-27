@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places in India</title>
+    <style>
+        #goTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+          }
+      
+          #goTopBtn:hover {
+            background-color: #465470;
+          } 
+        .title-container {
+            background-color: #f0f0f0; /* Background color of the container */
+            padding: 20px; /* Padding around the container */
+            text-align: center; /* Center align the content */
+            margin-bottom: 20px; /* Add some space below the container */
+        }
+        h1 {
+            text-align: center;
+            color: #edeaea; /* Change the color to your desired color */
+            font-family: Arial, sans-serif; /* Change the font family to your desired font */
+        }
+
+        /* Your existing CSS styles */
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 90px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            flex: 1 0 300px;
+            position: relative;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        .container strong {
+            color: #643d3d;
+        }
+
+        .container img {
+            width: 500%; /* Responsive image */
+            max-width: 500px; /* Adjust maximum width as needed */
+            height: fill;
+            display: block;
+            border-radius: 50px;
+            margin: 0 auto 50px;
+        }
+
+        .container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container h2 {
+            padding-left: 40px;
+            font-size: 40px; /* Adjust the font size as needed */
+            color: #333;
+            margin-bottom: 10px; /* Added margin-bottom to create space between the state name and content */
+        }
+        .container ul {
+            padding-left: 40px;
+            font-size: 20px; /* Increase the font size of the bullet points */
+        }
+        
+        .container ul li {
+            margin-bottom: 10px;
+            list-style-type: disc; /* Change the bullet point style */
+        }
+        
+        
+
+        /* Define background images for each container 
+        #gulmargContainer {
+            background-image: url('https://ihplb.b-cdn.net/wp-content/uploads/2020/11/Children-Park-in-Gulmarg.jpg');
+        }
+
+        #agattiIslandContainer {
+            background-image: url('https://www.lakshadweeptravelguru.com/wp-content/uploads/2019/11/agatti-island1-1.jpg');
+        }
+
+        /* Add more container IDs and corresponding background images as needed */
+
+        /* Search Button Styles */
+        #searchButton {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: red;
+            border: none;
+            padding: 10px 80px;
+            font-size: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 99;
+            display: inline-block;
+        }
+
+        .input-search{
+            height: 40px;
+            width: 50px;
+            border-style: none;
+            padding: 10px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            outline: none;
+            border-radius: 25px;
+            transition: all .5s ease-in-out;
+            background-color: white;
+            padding-right: 20px;
+            color:black;
+          }
+          .input-search::placeholder{
+            color:black;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 100;
+          }
+          .btn-search{
+            width: 50px;
+            height: 50px;
+            border-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            color:#ffffff ;
+            background-color:transparent;
+            pointer-events: painted;  
+          }
+          .btn-search:focus ~ .input-search{
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom:1px solid rgba(255,255,255,.5);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+          }
+          .input-search:focus{
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom:1px solid black;
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+          }
+
+        @media only screen and (max-width: 768px) {
+            #searchButton {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            #searchButton {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+   
+        
+    </style>
+</head>
+<body>
+    <div id="searchButton">
+        <form onsubmit="return searchState()">
+            <input type="text" class="input-search" id="searchInput" placeholder="Enter state name">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    
+
+    <div id="stateInfoContainer">
+        <!-- This container will be populated with state information dynamically -->
+    
+
+    <div class="container">
+        <h2>Maharashtra</h2>
+        <img src="https://www.justahotels.com/wp-content/uploads/2023/09/Maharashtra-scaled.jpg" alt="Maharashtra">
+        <ul>
+            <li>Mumbai - Gateway of India</li>
+            <li>Pune - Shaniwar Wada</li>
+            <li>Aurangabad - Ajanta and Ellora Caves</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Arunachal Pradesh</h2>
+        <img src="https://static.toiimg.com/photo/91692789.cms" alt="Arunachal Pradesh">
+        <ul>
+            <li>Tawang Monastery</li>
+            <li>Dirang Valley</li>
+            <li>Ziro Valley</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Assam</h2>
+        <img src="https://liamtra.com/blog/wp-content/uploads/2022/06/Island-1024x585.jpg" alt="Assam">
+        <ul>
+            <li>Kaziranga National Park</li>
+            <li>Majuli Island</li>
+            <li>Kamakhya Temple</li>
+        </ul>
+    </div>
+
+    <div class="container" id="bihir Container">
+        <h2>Bihar</h2>
+        <img src="https://inbihar.org/wp-content/uploads/2024/02/qw.jpg" alt="Bihar">
+        <ul>
+            <li>Mahabodhi Temple</li>
+            <li>Nalanda University</li>
+            <li>Patna Sahib Gurudwara</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Gujarat</h2>
+        <img src="https://www.nativeplanet.com/img/2023/11/an-exclusive-glimpse-into-the-conception-of-the-majestic-rann-of-kutch-festival_1699085463951-1200x675-20231104135401.jpg" alt="Gujarat">
+        <ul>
+            <li>Gir National Park</li>
+            <li>Rann of Kutch</li>
+            <li>Somnath Temple</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Goa</h2>
+        <img src="https://www.goa.gov.in/wp-content/uploads/2020/08/Calangutemain.jpg" alt="Goa">
+        <ul>
+            <li>Calangute Beach</li>
+            <li>Basilica of Bom Jesus</li>
+            <li>Dudhsagar Falls</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Manipur</h2>
+        <img src="https://www.thetoptours.com/wp-content/uploads/kangla-fort-imphal-travel-guide.jpg" alt="Manipur">
+        <ul>
+            <li>Loktak Lake</li>
+            <li>Kangla Fort</li>
+            <li>Shree Govindajee Temple</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Karnataka</h2>
+        <img src="https://www.indiatravelblog.com/attachments/forum/1146-1-Coorg.jpg" alt="Karnataka">
+        <ul>
+            <li>Mysore Palace</li>
+            <li>Coorg - Scotland of India</li>
+            <li>Hampi - UNESCO World Heritage Site</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Kerala</h2>
+        <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/2023/08/tripsavvy.com_-1024x683.jpg" alt="Kerala">
+        <ul>
+            <li>Backwaters of Alleppey</li>
+            <li>Munnar - Hill Station</li>
+            <li>Kovalam Beach</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Haryana</h2>
+        <img src="https://resources.intermiles.com/iwov-resources/images/blog/December2021/10-places-to-visit-in-kurukshetra/cover580x580.jpg" alt="Haryana">
+        <ul>
+            <li>Sultanpur National Park</li>
+            <li>Surajkund - International Crafts Fair</li>
+            <li>Kurukshetra - Religious Site</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Chhattisgarh</h2>
+        <img src="https://www.unexploredbastar.com/wp-content/uploads/2016/08/Tirathgarh_waterfalls_optimized-1133x737.jpeg" alt="Chhattisgarh">
+        <ul>
+            <li>Chitrakoot Falls</li>
+            <li>Bastar - Tribal Culture</li>
+            <li>Tirathgarh Falls</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Himachal Pradesh</h2>
+        <img src="https://www.oyorooms.com/blog/wp-content/uploads/2017/11/Feature-Image-min-12.jpg" alt="Himachal Pradesh">
+        <ul>
+            <li>Shimla - Queen of Hills</li>
+            <li>Manali - Adventure Hub</li>
+            <li>Dharamshala - Tibetan Culture</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Andhra Pradesh</h2>
+        <img src="https://www.savaari.com/blog/wp-content/uploads/2021/05/Araku-Valley7-waterfalls.jpg" alt="Andhra Pradesh">
+        <ul>
+            <li>Venkateswara Temple, Tirupati</li>
+            <li>Araku Valley</li>
+            <li>Krishna River</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Jharkhand</h2>
+        <img src="https://static.toiimg.com/thumb/msid-85740087,width-748,height-499,resizemode=4,imgsize-146234/.jpg" alt="Jharkhand">
+        <ul>
+            <li>Hazaribagh National Park</li>
+            <li>Ranchi - City of Waterfalls</li>
+            <li>Betla National Park</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Delhi</h2>
+        <img src="https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2022/04/bdd0e-delhi.jpg?fit=1000%2C684&ssl=1" alt="Delhi">
+        <ul>
+            <li>Red Fort</li>
+            <li>Qutub Minar</li>
+            <li>India Gate</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Punjab</h2>
+        <img src="https://static.wixstatic.com/media/3417b6_9d136d18669d49d6ae8315c01402a94d~mv2.jpg/v1/fill/w_640,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3417b6_9d136d18669d49d6ae8315c01402a94d~mv2.jpg" alt="Punjab">
+        <ul>
+            <li>Golden Temple, Amritsar</li>
+            <li>Jallianwala Bagh</li>
+            <li>Wagah Border</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Rajasthan</h2>
+        <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/udaipur.jpg" alt="Rajasthan">
+        <ul>
+            <li>Jaipur - Pink City</li>
+            <li>Udaipur - City of Lakes</li>
+            <li>Jaisalmer - Golden City</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Madhya Pradesh</h2>
+        <img src="https://static.toiimg.com/photo/64665528.cms" alt="Madhya Pradesh">
+        <ul>
+            <li>Khajuraho Temples</li>
+            <li>Sanchi Stupa</li>
+            <li>Bhimbetka Caves</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Mizoram</h2>
+        <img src="https://static2.tripoto.com/media/filter/tst/img/172710/TripDocument/1574326511_64922861_6124589693152_6737168421575720960_n_mizoram.png" alt="Mizoram">
+        <ul>
+            <li>Blue Mountain (Phawngpui)</li>
+            <li>Palak Lake</li>
+            <li>Reiek Tlang</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Tamil Nadu</h2>
+        <img src="https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/the-nilgiri-mountain-railway-1653904566_39d2e58ed7221faa8057.webp" alt="Tamil Nadu">
+        <ul>
+            <li>Meenakshi Temple, Madurai</li>
+            <li>Marina Beach, Chennai</li>
+            <li>Nilgiri Mountain Railway, Ooty</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Odisha</h2>
+        <img src="https://suryainn.in/wp-content/uploads/2023/09/konark-time-table.jpg" alt="Odisha">
+        <ul>
+            <li>Puri Beach</li>
+            <li>Konark Sun Temple</li>
+            <li>Chilika Lake</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Nagaland</h2>
+        <img src="https://static.toiimg.com/photo/97834460.cms" alt="Nagaland">
+        <ul>
+            <li>Dzukou Valley</li>
+            <li>Kohima War Cemetery</li>
+            <li>Khonoma Village</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Sikkim</h2>
+        <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/05/cover.jpg" alt="Sikkim">
+        <ul>
+            <li>Gangtok - Capital City</li>
+            <li>Nathu La Pass</li>
+            <li>Yumthang Valley</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Tripura</h2>
+        <img src="https://boroktimes.com/storage/2023/06/Neermahal-1.jpg" alt="Tripura">
+        <ul>
+            <li>Neermahal Palace</li>
+            <li>Ujjayanta Palace</li>
+            <li>Unakoti Hill</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Uttar Pradesh</h2>
+        <img src="https://www.holidify.com/images/cmsuploads/compressed/Varanasi_20180403170248.jpg" alt="Uttar Pradesh">
+        <ul>
+            <li>Taj Mahal, Agra</li>
+            <li>Varanasi Ghats</li>
+            <li>Meerut - Hastinapur Wildlife Sanctuary</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>West Bengal</h2>
+        <img src="https://www.teacupsfull.com/cdn/shop/articles/Darjeeling_Tea_-_TCF.jpg?v=1533630182" alt="West Bengal">
+        <ul>
+            <li>Howrah Bridge, Kolkata</li>
+            <li>Sunderbans National Park</li>
+            <li>Darjeeling - Tea Gardens</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Meghalaya</h2>
+        <img src="https://imgcld.yatra.com/ytimages/image/upload/t_yt_blog_c_fill_q_auto:good_f_auto_w_800_h_500/v1495187641/DO_NOT_USE_DISCOVER_INDIA_EDITORIAL/May_2016_Focus_Northerast_-_shillong-peak-shot-assam-india_1.jp" alt="Meghalaya">
+        <ul>
+            <li>Shillong - Scotland of the East</li>
+            <li>Cherrapunji - Wettest Place on Earth</li>
+            <li>Living Root Bridges</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Telangana</h2>
+        <img src="https://img.veenaworld.com/wp-content/uploads/2021/05/Birla-Mandir-Hyderabad-Timings-History-How-to-Visit.jpeg" alt="Telangana">
+        <ul>
+            <li>Charminar, Hyderabad</li>
+            <li>Golconda Fort</li>
+            <li>Hyderabad - Ramoji Film City</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Uttarakhand</h2>
+        <img src="https://rishikeshdaytour.com/blog/wp-content/uploads/2022/02/Ganga-Aarti-in-Haridwar.jpg" alt="Uttarakhand">
+        <ul>
+            <li>Haridwar - Ganga Aarti</li>
+            <li>Rishikesh - Yoga Capital of the World</li>
+            <li>Jim Corbett National Park</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Jammu & Kashmir</h2>
+        <img src="https://www.picnicwale.com/attractions/assets/sightseeing/pahalgam-in-kashmir-barnner.jpg" alt="Jammu & Kashmir">
+        <ul>
+            <li>Srinagar - Dal Lake</li>
+            <li>Gulmarg - Skiing Destination</li>
+            <li>Pahalgam - Valley of Shepherds</li>
+        </ul>
+    </div>
+<button id="goTopBtn" onclick="goToTop()">
+    <svg xmlns="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Top_Arrow.svg/120px-Top_Arrow.svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 14l-7-7-7 7m14 0l-7 7-7-7"></path>
+    </svg>
+    Top
+  </button>
+
+    <!-- Add containers for more states -->
+    <script>
+        window.onscroll = function () {
+            showGoTopButton();
+          };
+      
+          function showGoTopButton() {
+            var goTopBtn = document.getElementById("goTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              goTopBtn.style.display = "block";
+            } else {
+              goTopBtn.style.display = "none";
+            }
+          }
+      
+          function goToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+        function searchState() {
+            var input = document.getElementById("searchInput").value.toLowerCase().trim(); // Get the input value and convert to lowercase
+            var containers = document.getElementsByClassName("container"); // Get all containers
+            
+            for (var i = 0; i < containers.length; i++) {
+                var container = containers[i];
+                var stateName = container.querySelector("h2").innerText.toLowerCase().trim(); // Get the state name and convert to lowercase
+                
+                // If the input matches the state name, scroll to the container
+                if (stateName.includes(input)) {
+                    container.scrollIntoView({ behavior: "smooth" }); // Scroll to the container
+                    return false; // Prevent form submission and page reload
+                }
+            }
+            alert("State not found!"); // Alert user if state is not found
+            return false; // Prevent form submission and page reload
+        }
+    </script>
+    
+</body>
+</html>

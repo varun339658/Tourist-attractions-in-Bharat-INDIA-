@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore India's Culinary Delights - Must-Try Foods & Restaurants</title>
+  <div class="typewriter-effect">
+    <div class="text" id="typewriter-text"></div>
+  </div>
+  <style>
+/* Container Styles */
+.container {
+    background-color: black; /* Change container background color to black */
+    color: white; /* Change container font color to white */
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 50px auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Adjust shadow color */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 800px;
+}   
+
+.container strong {
+    color: white; /* Change state name font color to white */
+}
+
+/* Button Styles */
+button {
+    background-color: white; /* Change button background color to white */
+    color: black; /* Change button text color to black */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #eeeeee; /* Change button background color on hover */
+}
+
+.typewriter-effect {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.typewriter-effect > .text {
+  max-width: 0;
+  animation: typing 5s steps(var(--characters)) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter-effect::after {
+  content: " |";
+  animation: blink 1s infinite;
+  animation-timing-function: step-end;
+}
+
+@keyframes typing {
+  100%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+    .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+     
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2em;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+      background-color: #b9cad3;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #6a0a0a;
+    }
+
+    section {
+      padding: 50px;
+      border-bottom: 1px solid #8d2323;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  
+  
+    .restaurant-address {
+      font-size: 0.8em;
+      color: #999;
+    }
+
+    /* Add smooth scrolling behavior if desired */
+    nav a {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    nav a:hover {
+      transform: translateY(-2px);
+    }
+
+    #goTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    #goTopBtn:hover {
+      background-color: #465470;
+    }
+ 
+  </style>
+</head>
+<body>
+
+<header>
+    <h1 id="typewriter-text">Taste the Essence of India: Must-Try Foods & Restaurants🍴</h1>
+  <p>Embark on a journey through India's vibrant flavors</p>
+</header>
+
+<main>
+  <nav>
+    <ul>
+        <li><a href="#telangana"><p class="hover-underline-animation">Telangana</p></a></li>
+       
+        <li><a href="#arunachal_pradesh"><p class="hover-underline-animation">Arunachal Pradesh</p></a></li>
+        <li><a href="#assam"><p class="hover-underline-animation">Assam</p></a></li>
+        <li><a href="#bihar"><p class="hover-underline-animation">Bihar</p></a></li>
+        <li><a href="#chhattisgarh"><p class="hover-underline-animation">Chhattisgarh</p></a></li>
+        <li><a href="#delhi"><p class="hover-underline-animation">Delhi</p></a></li>
+        <li><a href="#goa"><p class="hover-underline-animation">Goa</p></a></li>
+        <li><a href="#gujarat"><p class="hover-underline-animation">Gujarat</p></a></li>
+        <li><a href="#haryana"><p class="hover-underline-animation">Haryana</p></a></li>
+        <li><a href="#himachal_pradesh"><p class="hover-underline-animation">Himachal Pradesh</p></a></li>
+        <li><a href="#jammu_and_kashmir"><p class="hover-underline-animation">Jammu and Kashmir</p></a></li>
+        <li><a href="#jharkhand"><p class="hover-underline-animation">Jharkhand</p></a></li>
+        <li><a href="#karnataka"><p class="hover-underline-animation">Karnataka</p></a></li>
+        <li><a href="#kerala"><p class="hover-underline-animation">Kerala</p></a></li>
+        <li><a href="#madhya_pradesh"><p class="hover-underline-animation">Madhya Pradesh</p></a></li>
+        <li><a href="#maharashtra"><p class="hover-underline-animation">Maharashtra</p></a></li>
+        <li><a href="#manipur"><p class="hover-underline-animation">Manipur</p></a></li>
+        <li><a href="#meghalaya"><p class="hover-underline-animation">Meghalaya</p></a></li>
+        <li><a href="#mizoram"><p class="hover-underline-animation">Mizoram</p></a></li>
+        <li><a href="#nagaland"><p class="hover-underline-animation">Nagaland</p></a></li>
+        <li><a href="#odisha"><p class="hover-underline-animation">Odisha</p></a></li>
+        <li><a href="#punjab"><p class="hover-underline-animation">Punjab</p></a></li>
+        <li><a href="#rajasthan"><p class="hover-underline-animation">Rajasthan</p></a></li>
+        <li><a href="#sikkim"><p class="hover-underline-animation">Sikkim</p></a></li>
+        <li><a href="#tamil_nadu"><p class="hover-underline-animation">Tamil Nadu</p></a></li>
+        <li><a href="#andhra_pradesh"><p class="hover-underline-animation">Andhra Pradesh</p></a></li>
+        <li><a href="#tripura"><p class="hover-underline-animation">Tripura</p></a></li>
+        <li><a href="#uttar_pradesh"><p class="hover-underline-animation">Uttar Pradesh</p></a></li>
+        <li><a href="#uttarakhand"><p class="hover-underline-animation">Uttarakhand</p></a></li>
+        <li><a href="#west_bengal"><p class="hover-underline-animation">West Bengal</p></a></li>
+        
+      </ul>
+  </nav>
+
+  <section id="telangana">
+    <h2>Telangana</h2>
+    <h3>Must try food</h3>
+    <ul>
+      <li>Hyderabadi Biryani (హైదరాబాద్ బిర్యాని): Aromatic, flavorful rice dish with meat or vegetables.</li>
+      <li>Gongura Pachadi (గొంగూర పచ్చడి): A tangy chutney made with gongura leaves.</li>
+    </ul>
+    <h3>Recommended restaurants</h3>
+    <ul>
+      <li>Paradise Biryani House (Hyderabad): Renowned for its authentic biryani. Address: SD Road, Paradise Circle, Secunderabad - 500003, Telangana, India.</li>
+      <img src="https://www.holidify.com/blog/wp-content/uploads/2015/11/Momo_nepal1.jpg" alt="" srcset="assam">
+    </ul>
+    
+  </section>
+  
+  <section id="arunachal_pradesh">
+    <h2>Arunachal Pradesh</h2>
+    <h3>Must try food</h3>
+    <ul>
+      <li>Thukpa (ཐུགསྐོ): A noodle soup with vegetables or meat.</li>
+      <li>Smoked Pork: Pork meat smoked for a unique flavor.</li>
+    </ul>
+    <h3>Recommended restaurants</h3>
+    <ul>
+      <li>The Orchid (Itanagar): Offers a variety of local and Indian cuisines. Address: Ganga Market, Itanagar - 791111, Arunachal Pradesh, India.</li>
+    </ul>
+  </section>
+  
+  <section id="assam">
+    <h2>Assam</h2>
+    <h3>Must try food</h3>
+    <ul>
+      <li>Assam Laksa: A spicy and tangy noodle soup with fish.</li>
+      <li>Masor Tenga (মাছৰ টেঙা): Sour fish curry made with tomatoes and lemon.</li>
+    </ul>
+    <h3>Recommended restaurants</h3>
+    <ul>
+      <li>Khorikaa (Guwahati): Known for its Assamese thali. Address: ABC Road, Guwahati - 781005, Assam, India.</li>
+    </ul>
+  </section>
+  
+  <section id="bihar">
+    <h2>Bihar</h2>
+    <h3>Must try food</h3>
+    <ul>
+      <li>Litti Chokha (लिट्टी चोखा): Baked wheat dough balls with spiced mashed vegetables.</li>
+      <li>Sattu Paratha (सत्तू पराठा): Flatbread stuffed with roasted gram flour and spices.</li>
+    </ul>
+    <h3>Recommended restaurants</h3>
+    <ul>
+      <li>Pind Balluchi (Patna): Offers a variety of North Indian and Bihari dishes. Address: Fraser Road, Patna - 800001, Bihar, India.</li>
+    </ul>
+  </section>
+  
+  <section id="chhattisgarh">
+    <h2>Chhattisgarh</h2>
+    <h3>Must try food</h3>
+    <ul>
+      <li>Chana Samosa: Samosas filled with spiced chickpeas.</li>
+      <li>Fara (फरा): Steamed rice dumplings filled with spiced lentils.</li>
+    </ul>
+    <h3>Recommended restaurants</h3>
+    <ul>
+      <li>Hotel Anandam (Raipur): Known for its Chhattisgarhi cuisine. Address: M.G. Road, Raipur - 492001, Chhattisgarh, India.</li>
+    </ul>
+  </section>
+      
+      <section id="delhi">
+        <h2>Delhi</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Butter Chicken (मुर्ग मखनी): A rich and creamy chicken curry.</li>
+          <li>Paratha (पराठा): Flaky, stuffed flatbread usually served with yogurt or pickles.</li>
+          <li>Chole Bhature (छोले भटूरे): Spiced chickpeas with deep-fried bread.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Karim's (Old Delhi): Famous for its Mughlai cuisine. Address: 16, Gali Kababian, Jama Masjid, Old Delhi, Delhi - 110006, India.</li>
+        </ul>
+      </section>
+
+      <section id="goa">
+        <h2>Goa</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Fish Curry Rice: Goan staple featuring fish curry with rice.</li>
+          <li>Prawn Balchão: Spicy and tangy shrimp curry.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Gunpowder (Assagao): Known for its Goan and South Indian cuisine. Address: House No. 6, Saunto Vaddo, Assagao, Goa, India.</li>
+        </ul>
+      </section>
+      
+      <section id="gujarat">
+        <h2>Gujarat</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Dhokla (ઢોકળા): Steamed fermented rice and chickpea flour cake.</li>
+          <li>Thepla (થેપલા): Spiced flatbread usually made with fenugreek leaves.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Swati Snacks (Ahmedabad): Offers a variety of traditional Gujarati snacks. Address: Near Law Garden, C.G. Road, Ahmedabad - 380009, Gujarat, India.</li>
+        </ul>
+      </section>
+      
+      <section id="haryana">
+        <h2>Haryana</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Kutti (कुट्टी): Coarse grain preparation often served with ghee.</li>
+          <li>Bajra Khichdi (बाजरा खिचड़ी): Pearl millet porridge usually served with yogurt.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Surjivan Resort (Gurugram): Offers traditional Haryanvi cuisine. Address: Opp. Indian Oil Petrol Pump, Golakpur, Gurugram - 122105, Haryana, India.</li>
+        </ul>
+      </section>
+      
+      <section id="himachal_pradesh">
+        <h2>Himachal Pradesh</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Sidu (सीड़ू): Steamed wheat bread usually served with ghee.</li>
+          <li>Dham (धाम): Traditional feast with various Himachali dishes.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Johnson's Café (Manali): Offers a mix of local and international cuisine. Address: Circuit House Road, Manali - 175131, Himachal Pradesh, India.</li>
+        </ul>
+      </section>
+
+      <section id="jammu_kashmir">
+        <h2>Jammu and Kashmir</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Rogan Josh: Aromatic and flavorful meat curry.</li>
+          <li>Gushtaba: Minced meatballs in a flavorful yogurt-based curry.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Shamyana Restaurant (Srinagar): Known for its Kashmiri cuisine. Address: Residency Road, Srinagar - 190001, Jammu and Kashmir, India.</li>
+        </ul>
+      </section>
+      
+      <section id="jharkhand">
+        <h2>Jharkhand</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Thekua: Sweet, deep-fried cookies made during Chhath Puja.</li>
+          <li>Chana Ghanta: A mixed vegetable curry with black gram.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Hotel Mahi Residency (Ranchi): Offers a variety of North Indian and local dishes. Address: Circular Road, Lalpur, Ranchi - 834001, Jharkhand, India.</li>
+        </ul>
+      </section>
+      
+      <section id="karnataka">
+        <h2>Karnataka</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Bisi Bele Bath (ಬಿಸಿ ಬೇಳೆ ಭಾತ್): Spiced rice dish with lentils and vegetables.</li>
+          <li>Neer Dosa (ನೀರು ದೋಸ): Soft and thin rice crepes.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Mavalli Tiffin Room (MTR) (Bangalore): Iconic for its South Indian dishes. Address: Lalbagh Road, Bangalore - 560027, Karnataka, India.</li>
+        </ul>
+      </section>
+      
+      <section id="kerala">
+        <h2>Kerala</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Appam with Ishtu (അപ്പം ഇസ്റ്റ്): Rice pancakes with a coconut-based stew.</li>
+          <li>Puttu and Kadala Curry (പുട്ടു കടലാ കറി): Steamed rice cake with black chickpea curry.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Dhe Puttu (Kochi): Specializes in traditional Kerala cuisine. Address: NH Bypass, Edappally, Kochi - 682024, Kerala, India.</li>
+        </ul>
+      </section>
+      
+      <section id="madhya_pradesh">
+        <h2>Madhya Pradesh</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Poha: Flattened rice cooked with spices and vegetables.</li>
+          <li>Bhutte Ka Kees: Grated corn cooked in a spiced milk-based curry.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Aashirwad Restaurant (Indore): Offers a mix of North Indian and local dishes. Address: Sapna Sangeeta Road, Indore - 452001, Madhya Pradesh, India.</li>
+        </ul>
+      </section>
+      
+      <section id="maharashtra">
+        <h2>Maharashtra</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Vada Pav (वडा पाव): Spicy potato fritter in a bun with chutneys.</li>
+          <li>Puran Poli (पुरण पोळी): Sweet flatbread with a filling of jaggery and lentils.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Shree Datta Snacks (Mumbai): Famous for its street food. Address: Shivaji Park, Dadar, Mumbai - 400028, Maharashtra, India.</li>
+        </ul>
+      </section>
+      
+      <section id="manipur">
+        <h2>Manipur</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Eromba: A traditional curry with fermented fish, vegetables, and bamboo shoots.</li>
+          <li>Thangjing: Sticky rice cakes served with sweet and spicy sides.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Imoinu Kitchen (Imphal): Offers authentic Manipuri dishes. Address: North AOC, Imphal - 795001, Manipur, India.</li>
+        </ul>
+      </section>
+      
+      <section id="meghalaya">
+        <h2>Meghalaya</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Jadoh: A rice and meat dish typically made with pork and served with black sesame chutney.</li>
+          <li>Doh Khlieh: A salad made with minced meat, onions, and local herbs.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Café Shillong (Shillong): Known for its local and continental cuisine. Address: Laitumkhrah, Shillong - 793003, Meghalaya, India.</li>
+        </ul>
+      </section>
+      
+      <section id="mizoram">
+        <h2>Mizoram</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Bai: A traditional Mizo stew made with meat and bamboo shoots.</li>
+          <li>Sa-um: Fermented bamboo shoot curry.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>David's Kitchen (Aizawl): Offers a variety of Mizo dishes. Address: Zodin Square, Aizawl - 796001, Mizoram, India.</li>
+        </ul>
+      </section>
+      
+      <section id="nagaland">
+        <h2>Nagaland</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Smoked Pork with Bamboo Shoot: Pork meat smoked for a unique flavor, served with bamboo shoots.</li>
+          <li>Axone (Fermented Soybean): A popular ingredient used in various Naga dishes.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Naga Bowl (Kohima): Known for its Naga cuisine. Address: PR Hill, Kohima - 797001, Nagaland, India.</li>
+        </ul>
+      </section>
+      
+      <section id="odisha">
+        <h2>Odisha</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Dalma: Lentils and vegetables cooked together, a staple dish of Odisha.</li>
+          <li>Chhena Poda (ଛେନା ପୋଡ଼): Roasted cheese dessert with a caramelized crust.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Dalma (Bhubaneswar): Offers a variety of Odia dishes. Address: Sahid Nagar, Bhubaneswar - 751007, Odisha, India.</li>
+        </ul>
+      </section>
+      
+      <section id="punjab">
+        <h2>Punjab</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Sarson da Saag and Makki di Roti (ਸਰਸੋਂ ਦਾ ਸਾਗ ਅਤੇ ਮੱਕੀ ਦੀ ਰੋਟੀ): Mustard greens curry with cornmeal flatbread.</li>
+          <li>Butter Chicken (ਬਟਰ ਚਿਕਨ): Creamy and spiced chicken curry.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Kesar Da Dhaba (Amritsar): An iconic vegetarian dhaba. Address: Chowk Passian, Amritsar - 143001, Punjab, India.</li>
+        </ul>
+      </section>
+      
+      <section id="rajasthan">
+        <h2>Rajasthan</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Daal Baati Churma (दाल बाटी छूरमा): Lentils with baked wheat balls and sweet crumbled bread.</li>
+          <li>Gatte ki Sabzi (गट्टे की सब्जी): Gram flour dumplings in a spiced yogurt curry.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Shree Thaal Village Restaurant (Jaipur): Offers a traditional Rajasthani thali. Address: Jhotwara Road, Jaipur - 302016, Rajasthan, India.</li>
+        </ul>
+      </section>
+      
+      <section id="sikkim">
+        <h2>Sikkim</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Phagshapa: Pork stew with radishes and dried turnips.</li>
+          <li>Momo (མོག་མོག): Steamed dumplings filled with meat or vegetables.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Taste of Tibet (Gangtok): Known for its Tibetan and Sikkimese cuisine. Address: MG Marg, Gangtok - 737101, Sikkim, India.</li>
+        </ul>
+      </section>
+      
+      <section id="tamil_nadu">
+        <h2>Tamil Nadu</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Chettinad Chicken Curry: Spicy and flavorful chicken curry from the Chettinad region.</li>
+          <li>Dosa: Thin rice crepes served with various chutneys and sambar.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Murugan Idli Shop (Chennai): Famous for its South Indian breakfast items. Address: GN Chetty Road, T Nagar, Chennai - 600017, Tamil Nadu, India.</li>
+        </ul>
+      </section>
+      
+      <section id="andhra_pradesh">
+        <h2>Andhra Pradesh</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Guntur Chicken: Fiery chicken dish known for its intense spiciness.</li>
+          <li>Bobbatlu: Soft flatbreads stuffed with a sweet coconut and lentil filling.</li>
+        </ul>
+        
+      </section>
+      <section id="tripura">
+        <h2>Tripura</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Mui Borok: A traditional platter featuring various dishes like bamboo shoot curry, fish stew, and rice cakes.</li>
+          <li>Wahan Mosdeng: A dry chutney made with fermented fish and local herbs.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Tripura Tribal Food Restaurant (Agartala): Offers authentic Tripuri cuisine. Address: Palace Compound, Agartala - 799001, Tripura, India.</li>
+        </ul>
+      </section>
+      
+      <section id="uttar_pradesh">
+        <h2>Uttar Pradesh</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Tunday Kababi (Lucknow): Famous for its Galouti Kebabs and other Awadhi delicacies. Address: Akbari Gate, Chowk, Lucknow - 226003, Uttar Pradesh, India.</li>
+          <li>Chaat: Popular street food with various savory and tangy snacks like Aloo Tikki, Pani Puri, and Dahi Puri.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Indian Accent (New Delhi): Offers modern Indian cuisine. Address: The Lodhi, Lodhi Road, New Delhi - 110003, India.</li>
+        </ul>
+      </section>
+      
+      <section id="uttarakhand">
+        <h2>Uttarakhand</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Aloo Ke Gutke: Spiced boiled potatoes, a popular dish in the Kumaon region.</li>
+          <li>Bal Mithai: Sweet chocolate-like fudge made with khoya.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>Chandni Chowk (Mussoorie): Offers a mix of North Indian and local dishes. Address: Mall Road, Mussoorie - 248179, Uttarakhand, India.</li>
+        </ul>
+      </section>
+      
+      <section id="west_bengal">
+        <h2>West Bengal</h2>
+        <h3>Must try food</h3>
+        <ul>
+          <li>Machher Jhol (মাছের ঝোল): Spicy fish curry, a staple in Bengali cuisine.</li>
+          <li>Rosogolla (রসগোল্লা): Soft spongy sweet dumplings soaked in sugar syrup.</li>
+        </ul>
+        <h3>Recommended restaurants</h3>
+        <ul>
+          <li>6 Ballygunge Place (Kolkata): Known for its traditional Bengali cuisine. Address: Ballygunge Place, Kolkata - 700019, West Bengal, India.</li>
+        </ul>
+      </section>
+
+  </main>
+
+<footer>
+  <p>&copy; 2024 MVSR</p>
+</footer>
+<button id="goTopBtn" onclick="goToTop()">
+    <svg xmlns="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Top_Arrow.svg/120px-Top_Arrow.svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 14l-7-7-7 7m14 0l-7 7-7-7"></path>
+    </svg>
+    Top
+  </button>
+<script>
+    const typeWriter = document.getElementById('typewriter-text');
+const text = 'Explore Indias Culinary Delights - Must-Try Foods & Restaurants';
+
+typeWriter.innerHTML = text;
+typeWriter.style.setProperty('--characters', text.length);
+window.onscroll = function () {
+      showGoTopButton();
+    };
+
+    function showGoTopButton() {
+      var goTopBtn = document.getElementById("goTopBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        goTopBtn.style.display = "block";
+      } else {
+        goTopBtn.style.display = "none";
+      }
+    }
+
+    function goToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>
+

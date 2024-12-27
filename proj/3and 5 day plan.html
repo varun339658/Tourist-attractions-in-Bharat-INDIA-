@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian States Itinerary</title>
+    <style>
+       /* Basic styles */
+/* Reset default margin and padding, set font-family */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+/* Center the header text, add padding, and set color */
+#header {
+    text-align: center;
+    padding: 30px 0;
+    color: #333;
+}
+
+/* Increase header font size and adjust margin */
+#header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Flex container for responsive layout */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Styles for left and right containers */
+#left-container, #right-container {
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Increase heading size and adjust margin */
+#left-container h2, #right-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Style for images in the left container */
+#left-container img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Reset default list styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Add spacing to list items */
+li {
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: grey;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: black;
+}
+
+    </style>
+</head>
+<body>
+
+<div id="left-container">
+<h1>Indian States Itinerary</h1>
+
+            <!-- Sample data for states and itinerary -->
+            <div id="AndhraPradesh" style="display: none;">
+                <h2>Andhra Pradesh</h2>
+                <h3>3-Day Itinerary</h3>
+                <ul>
+                    <li>Day 1: Visit Tirupati Balaji Temple</li>
+                    <li>Day 2: Explore Kailasagiri Hill Park</li>
+                    <li>Day 3: Relax at Rishikonda Beach</li>
+                </ul>
+                <h3>5-Day Itinerary</h3>
+                <ul>
+                    <li>Day 1-2: Visit Tirupati Balaji Temple and Kailasagiri Hill Park</li>
+                    <li>Day 3: Explore Araku Valley</li>
+                    <li>Day 4-5: Relax at Rishikonda Beach</li>
+                </ul>
+            </div>
+
+    <div id="ArunachalPradesh" style="display: none;">
+        <h2>Arunachal Pradesh</h2>
+        <h3>3-Day Itinerary</h3>
+        <ul>
+            <li>Day 1: Trek in Namdapha National Park</li>
+            <li>Day 2: Visit Tawang Monastery</li>
+            <li>Day 3: Explore Sela Pass</li>
+        </ul>
+        <h3>5-Day Itinerary</h3>
+        <ul>
+            <li>Day 1-2: Trek in Namdapha National Park and Visit Tawang Monastery</li>
+            <li>Day 3: Explore Bum La Pass</li>
+            <li>Day 4-5: Relax in Ziro Valley</li>
+        </ul>
+    </div>
+
+    <div id="Assam" style="display: none;">
+        <h2>Assam</h2>
+        <h3>3-Day Itinerary</h3>
+        <ul>
+            <li>Day 1: Explore Kaziranga National Park</li>
+            <li>Day 2: Visit Kamakhya Temple</li>
+            <li>Day 3: Cruise on Brahmaputra River</li>
+        </ul>
+        <h3>5-Day Itinerary</h3>
+        <ul>
+            <li>Day 1-2: Explore Kaziranga National Park and Kamakhya Temple</li>
+            <li>Day 3: Visit Majuli Island</li>
+            <li>Day 4-5: Cruise on Brahmaputra River</li>
+        </ul>
+    </div>
+   
+    <!-- Bihar -->
+<div id="Bihar" style="display: none;">
+    <h2>Bihar</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Visit Mahabodhi Temple in Bodh Gaya</li>
+        <li>Day 2: Explore Nalanda University ruins</li>
+        <li>Day 3: Relax by the Ganges River in Patna</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Bodh Gaya and Mahabodhi Temple</li>
+        <li>Day 3: Visit Rajgir and Nalanda</li>
+        <li>Day 4-5: Explore Patna and take a boat ride on the Ganges</li>
+    </ul>
+</div>
+
+<!-- Chhattisgarh -->
+<div id="Chhattisgarh" style="display: none;">
+    <h2>Chhattisgarh</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Chitrakote Waterfall</li>
+        <li>Day 2: Visit Bastar Palace in Jagdalpur</li>
+        <li>Day 3: Discover Kutumsar Caves</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Chitrakote Waterfall and Tirathgarh Waterfall</li>
+        <li>Day 3: Visit Jagdalpur and Bastar Palace</li>
+        <li>Day 4-5: Discover Kutumsar and Kailash Caves</li>
+    </ul>
+</div>
+
+<!-- Delhi -->
+<div id="Delhi" style="display: none;">
+    <h2>Delhi</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore India Gate and Humayun's Tomb</li>
+        <li>Day 2: Visit Red Fort and Jama Masjid</li>
+        <li>Day 3: Explore Qutub Minar and Lotus Temple</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Old Delhi - Chandni Chowk and its markets</li>
+        <li>Day 3: Visit Akshardham Temple and Raj Ghat</li>
+        <li>Day 4-5: Explore New Delhi - India Gate, Qutub Minar, and museums</li>
+    </ul>
+</div>
+
+<!-- Goa -->
+<div id="Goa" style="display: none;">
+    <h2>Goa</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Relax at Baga Beach</li>
+        <li>Day 2: Explore Fort Aguada and Anjuna Flea Market</li>
+        <li>Day 3: Cruise on the Mandovi River</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Visit Calangute Beach and Fort Aguada</li>
+        <li>Day 3: Explore Dudhsagar Waterfalls</li>
+        <li>Day 4-5: Relax at Palolem Beach and take a spice plantation tour</li>
+    </ul>
+</div>
+
+<!-- Gujarat -->
+<div id="Gujarat" style="display: none;">
+    <h2>Gujarat</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Visit Somnath Temple</li>
+        <li>Day 2: Explore Rann of Kutch</li>
+        <li>Day 3: Relax at Dwarka Beach</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Visit Akshardham Temple and Rann of Kutch</li>
+        <li>Day 3: Explore Gir National Park</li>
+        <li>Day 4-5: Relax at Dwarka Beach</li>
+    </ul>
+</div>
+
+<!-- Haryana -->
+<div id="Haryana" style="display: none;">
+    <h2>Haryana</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Kingdom of Dreams in Gurgaon</li>
+        <li>Day 2: Visit Surajkund Crafts Mela</li>
+        <li>Day 3: Relax at Damdama Lake</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Gurgaon and Kingdom of Dreams</li>
+        <li>Day 3: Visit Sultanpur National Park</li>
+        <li>Day 4-5: Relax at Damdama Lake and explore Faridabad</li>
+    </ul>
+</div>
+
+<!-- Himachal Pradesh -->
+<div id="HimachalPradesh" style="display: none;">
+    <h2>Himachal Pradesh</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Visit Shimla Mall Road and Christ Church</li>
+        <li>Day 2: Explore Kufri and Fagu</li>
+        <li>Day 3: Relax at The Ridge</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Manali and Solang Valley</li>
+        <li>Day 3: Visit Rohtang Pass</li>
+        <li>Day 4-5: Relax in Dharamshala and explore McLeod Ganj</li>
+    </ul>
+</div>
+<!-- Jharkhand -->
+<div id="Jharkhand" style="display: none;">
+    <h2>Jharkhand</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Betla National Park</li>
+        <li>Day 2: Visit Hundru Falls and Rock Garden in Ranchi</li>
+        <li>Day 3: Relax at Netarhat</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Betla National Park and visit Palamau Fort</li>
+        <li>Day 3: Visit Jonha Falls and Tagore Hill</li>
+        <li>Day 4-5: Explore Hazaribagh and relax at Netarhat</li>
+    </ul>
+</div>
+
+<!-- Karnataka -->
+<div id="Karnataka" style="display: none;">
+    <h2>Karnataka</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Mysuru Palace and Chamundi Hills</li>
+        <li>Day 2: Visit Hampi's historic ruins</li>
+        <li>Day 3: Relax at Gokarna Beach</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Bangalore and Mysuru</li>
+        <li>Day 3: Visit Badami Caves and Pattadakal</li>
+        <li>Day 4-5: Explore Hampi and relax at Gokarna Beach</li>
+    </ul>
+</div>
+
+<!-- Kerala -->
+<div id="Kerala" style="display: none;">
+    <h2>Kerala</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Houseboat cruise in Alleppey</li>
+        <li>Day 2: Explore Periyar National Park</li>
+        <li>Day 3: Relax at Varkala Beach</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Kochi and take a backwater cruise</li>
+        <li>Day 3: Visit Munnar and tea plantations</li>
+        <li>Day 4-5: Explore Thekkady and relax at Varkala Beach</li>
+    </ul>
+</div>
+
+<!-- Madhya Pradesh -->
+<div id="MadhyaPradesh" style="display: none;">
+    <h2>Madhya Pradesh</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Visit Khajuraho Temples</li>
+        <li>Day 2: Explore Bandhavgarh National Park</li>
+        <li>Day 3: Relax at Bhimbetka Rock Shelters</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Bhopal and Sanchi Stupa</li>
+        <li>Day 3: Visit Kanha National Park</li>
+        <li>Day 4-5: Explore Gwalior and relax at Bhimbetka Rock Shelters</li>
+    </ul>
+</div>
+
+<!-- Maharashtra -->
+<div id="Maharashtra" style="display: none;">
+    <h2>Maharashtra</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Gateway of India and Elephanta Caves</li>
+        <li>Day 2: Visit Ajanta and Ellora Caves</li>
+        <li>Day 3: Relax at Alibaug Beach</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Mumbai and its attractions</li>
+        <li>Day 3: Visit Nashik and Sula Vineyards</li>
+        <li>Day 4-5: Explore Aurangabad and relax at Alibaug Beach</li>
+    </ul>
+</div>
+
+<!-- Manipur -->
+<div id="Manipur" style="display: none;">
+    <h2>Manipur</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Loktak Lake and Sendra Island</li>
+        <li>Day 2: Visit Kangla Fort and Imphal War Cemetery</li>
+        <li>Day 3: Relax at Khonghampat Orchidarium</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Imphal and Loktak Lake</li>
+        <li>Day 3: Visit Moreh and the Myanmar border</li>
+        <li>Day 4-5: Explore Ukhrul and relax at Khonghampat Orchidarium</li>
+    </ul>
+</div>
+
+<!-- Meghalaya -->
+<div id="Meghalaya" style="display: none;">
+    <h2>Meghalaya</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Shillong and Ward's Lake</li>
+        <li>Day 2: Visit Mawphlang Sacred Forest and Elephant Falls</li>
+        <li>Day 3: Relax at Umiam Lake</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Shillong and Cherrapunjee</li>
+        <li>Day 3: Visit Dawki River and Mawlynnong Village</li>
+        <li>Day 4-5: Explore Jaintia Hills and relax at Umiam Lake</li>
+    </ul>
+</div>
+<!-- Mizoram -->
+<div id="Mizoram" style="display: none;">
+    <h2>Mizoram</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Aizawl and visit Solomon's Temple</li>
+        <li>Day 2: Trek to Durtlang Hills and visit Tamdil Lake</li>
+        <li>Day 3: Relax at Vantawng Falls</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Aizawl and visit Reiek Heritage Village</li>
+        <li>Day 3: Trek to Mawryngkhang and visit Tualchang</li>
+        <li>Day 4-5: Explore Champhai and relax at Vantawng Falls</li>
+    </ul>
+</div>
+
+<!-- Nagaland -->
+<div id="Nagaland" style="display: none;">
+    <h2>Nagaland</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Kohima and visit Naga Heritage Village</li>
+        <li>Day 2: Visit Dzukou Valley and Japfu Peak</li>
+        <li>Day 3: Relax at Intanki Wildlife Sanctuary</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Kohima and visit Khonoma Village</li>
+        <li>Day 3: Trek to Shilloi Lake</li>
+        <li>Day 4-5: Explore Dimapur and relax at Intanki Wildlife Sanctuary</li>
+    </ul>
+</div>
+
+<!-- Odisha -->
+<div id="Odisha" style="display: none;">
+    <h2>Odisha</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Konark Sun Temple and Chandrabhaga Beach</li>
+        <li>Day 2: Visit Puri Jagannath Temple and relax at Chilika Lake</li>
+        <li>Day 3: Explore Bhubaneswar and visit Lingaraj Temple</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Bhubaneswar and visit Udayagiri and Khandagiri Caves</li>
+        <li>Day 3: Explore Cuttack and visit Dhauligiri Shanti Stupa</li>
+        <li>Day 4-5: Visit Simlipal National Park and relax at Chandipur Beach</li>
+    </ul>
+</div>
+
+<!-- Punjab -->
+<div id="Punjab" style="display: none;">
+    <h2>Punjab</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Golden Temple in Amritsar</li>
+        <li>Day 2: Visit Jallianwala Bagh and Wagah Border</li>
+        <li>Day 3: Explore Patiala and Qila Mubarak</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Amritsar and visit Maharaja Ranjit Singh Museum</li>
+        <li>Day 3: Visit Bathinda and Qila Bahadurgarh</li>
+        <li>Day 4-5: Explore Ludhiana and relax at Ropar Wetland</li>
+    </ul>
+</div>
+
+<!-- Rajasthan -->
+<div id="Rajasthan" style="display: none;">
+    <h2>Rajasthan</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Jaipur and visit City Palace</li>
+        <li>Day 2: Visit Amber Fort and Jantar Mantar</li>
+        <li>Day 3: Explore Jodhpur and Mehrangarh Fort</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Udaipur and visit City Palace</li>
+        <li>Day 3: Visit Ranakpur Jain Temple and Kumbhalgarh Fort</li>
+        <li>Day 4-5: Explore Pushkar and relax at Ajmer Dargah</li>
+    </ul>
+</div>
+
+<!-- Sikkim -->
+<div id="Sikkim" style="display: none;">
+    <h2>Sikkim</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Gangtok and visit Rumtek Monastery</li>
+        <li>Day 2: Visit Nathula Pass and Tsomgo Lake</li>
+        <li>Day 3: Explore Pelling and visit Pemayangtse Monastery</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Gangtok and visit Banjhakri Falls</li>
+        <li>Day 3: Visit Yuksom and Dubdi Monastery</li>
+        <li>Day 4-5: Explore Lachung and Yumthang Valley</li>
+    </ul>
+</div>
+
+<!-- Tamil Nadu -->
+<div id="TamilNadu" style="display: none;">
+    <h2>Tamil Nadu</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Chennai and visit Marina Beach</li>
+        <li>Day 2: Visit Mahabalipuram and its UNESCO sites</li>
+        <li>Day 3: Explore Pondicherry and Auroville</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Chennai and visit Kapaleeshwarar Temple</li>
+        <li>Day 3: Visit Trichy and Rockfort Temple</li>
+        <li>Day 4-5: Explore Madurai and Meenakshi Amman Temple</li>
+    </ul>
+</div>
+
+<!-- Telangana -->
+<div id="Telangana" style="display: none;">
+    <h2>Telangana</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Hyderabad and visit Golconda Fort</li>
+        <li>Day 2: Visit Charminar and Mecca Masjid</li>
+        <li>Day 3: Explore Ramoji Film City</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Hyderabad and visit Birla Mandir</li>
+        <li>Day 3: Visit Warangal Fort and Thousand Pillar Temple</li>
+        <li>Day 4-5: Explore Nizamabad and relax at Pocharam Wildlife Sanctuary</li>
+    </ul>
+</div>
+
+<!-- Tripura -->
+<div id="Tripura" style="display: none;">
+    <h2>Tripura</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Agartala and visit Ujjayanta Palace</li>
+        <li>Day 2: Visit Neermahal Palace and Kamalasagar Kali Temple</li>
+        <li>Day 3: Explore Unakoti and Pilak</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Agartala and visit Jagannath Temple</li>
+        <li>Day 3: Visit Jampui Hills and Vanghmun</li>
+        <li>Day 4-5: Explore Ambassa and relax at Tirthamukh</li>
+    </ul>
+</div>
+
+<!-- Uttar Pradesh -->
+<div id="UttarPradesh" style="display: none;">
+    <h2>Uttar Pradesh</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Agra and visit Taj Mahal</li>
+        <li>Day 2: Visit Fatehpur Sikri and Agra Fort</li>
+        <li>Day 3: Explore Varanasi and the ghats along the Ganges</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Delhi and visit India Gate</li>
+        <li>Day 3: Visit Allahabad and Triveni Sangam</li>
+        <li>Day 4-5: Explore Mathura and Vrindavan</li>
+    </ul>
+</div>
+
+<!-- Uttarakhand -->
+<div id="Uttarakhand" style="display: none;">
+    <h2>Uttarakhand</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Haridwar and attend the Ganga Aarti</li>
+        <li>Day 2: Visit Rishikesh and enjoy adventure activities</li>
+        <li>Day 3: Explore Nainital and take a boat ride on Naini Lake</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Dehradun and visit Robber's Cave</li>
+        <li>Day 3: Visit Kedarnath Temple</li>
+        <li>Day 4-5: Explore Jim Corbett National Park and enjoy wildlife safari</li>
+    </ul>
+</div>
+
+<!-- West Bengal -->
+<div id="WestBengal" style="display: none;">
+    <h2>West Bengal</h2>
+    <h3>3-Day Itinerary</h3>
+    <ul>
+        <li>Day 1: Explore Kolkata and visit Victoria Memorial</li>
+        <li>Day 2: Visit Howrah Bridge and Dakshineswar Kali Temple</li>
+        <li>Day 3: Explore Sundarbans National Park</li>
+    </ul>
+    <h3>5-Day Itinerary</h3>
+    <ul>
+        <li>Day 1-2: Explore Darjeeling and visit Tiger Hill</li>
+        <li>Day 3: Visit Kalimpong and Deolo Park</li>
+        <li>Day 4-5: Explore Digha and relax at Mandarmani Beach</li>
+    </ul>
+</div>
+
+
+    <!-- Repeat similar structure for other states -->
+</div>
+
+<div id="right-container">
+    <h2>States</h2>
+    <button onclick="showState('AndhraPradesh')">Andhra Pradesh</button>
+<button onclick="showState('ArunachalPradesh')">Arunachal Pradesh</button>
+<button onclick="showState('Assam')">Assam</button>
+<button onclick="showState('Bihar')">Bihar</button>
+<button onclick="showState('Chhattisgarh')">Chhattisgarh</button>
+<button onclick="showState('Delhi')">Delhi</button>
+<button onclick="showState('Goa')">Goa</button>
+<button onclick="showState('Gujarat')">Gujarat</button>
+<button onclick="showState('Haryana')">Haryana</button>
+<button onclick="showState('Himachal Pradesh')">Himachal Pradesh</button>
+<button onclick="showState('Jharkhand')">Jharkhand</button>
+<button onclick="showState('Karnataka')">Karnataka</button>
+<button onclick="showState('Kerala')">Kerala</button>
+<button onclick="showState('Madhya Pradesh')">Madhya Pradesh</button>
+<button onclick="showState('Maharashtra')">Maharashtra</button>
+<button onclick="showState('Manipur')">Manipur</button>
+<button onclick="showState('Meghalaya')">Meghalaya</button>
+<button onclick="showState('Mizoram')">Mizoram</button>
+<button onclick="showState('Nagaland')">Nagaland</button>
+<button onclick="showState('Odisha')">Odisha</button>
+<button onclick="showState('Punjab')">Punjab</button>
+<button onclick="showState('Rajasthan')">Rajasthan</button>
+<button onclick="showState('Sikkim')">Sikkim</button>
+<button onclick="showState('Tamil Nadu')">Tamil Nadu</button>
+<button onclick="showState('Telangana')">Telangana</button>
+<button onclick="showState('Tripura')">Tripura</button>
+<button onclick="showState('Uttar Pradesh')">Uttar Pradesh</button>
+<button onclick="showState('Uttarakhand')">Uttarakhand</button>
+<button onclick="showState('West Bengal')">West Bengal</button>
+</div>
+
+<script>
+    var currentlyDisplayedStateDiv = null;
+
+    function showState(state) {
+        // Hide the currently displayed state div
+        if (currentlyDisplayedStateDiv) {
+            currentlyDisplayedStateDiv.style.display = 'none';
+        }
+
+        // Show the selected state div
+        var selectedStateDiv = document.getElementById(state.replace(/\s+/g, ''));
+        if (selectedStateDiv) {
+            selectedStateDiv.style.display = 'block';
+            currentlyDisplayedStateDiv = selectedStateDiv;
+        }
+    }
+</script>
+
+
+</body>
+</html>
